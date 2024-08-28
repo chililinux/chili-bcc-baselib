@@ -1,12 +1,12 @@
 # Maintainer: Vilmar Catafesta <vcatafesta@gmail.com>
 
 pkgname=chili-bcc-baselib
-pkgdesc="Arquivos e bibliotecas base para interfaces dos aplicativos do bigcontrolcenter"
+pkgdesc="Biblioteca base para interfaces dos aplicativos do BigControlCenter (bcc)"
 #makedepends=('')
 #optdepends=('')
-provides=('bigcontrolcenter-base')  # O novo pacote fornece as funcionalidades do antigo
-replaces=('bigcontrolcenter-base')  # O novo pacote substitui o antigo
-conflicts=('bigcontrolcenter-base') # O novo pacote entra em conflito com o antigo
+#provides=('') 											# O novo pacote fornece as funcionalidades do antigo
+replaces=('bigcontrolcenter-base') 	# O novo pacote substitui o antigo
+conflicts=('bigcontrolcenter-base')	# O novo pacote entra em conflito com o antigo
 pkgver=$(date +%y.%m.%d)
 pkgrel=$(date +%H%M)
 arch=('any')
@@ -15,36 +15,36 @@ url="https://github.com/chililinux/${pkgname}"
 source=("git+${url}.git")
 md5sums=('SKIP')
 depends=('bash'
-	'curl'
-	'coreutils'  # cat, cut, mkdir,rmdir, rm, sort, uniq, ... etc
-	'util-linux' # rev
-	'gawk'
-	'grep'
-	'jq'
-	'pamac-gtk'
-	'paru'
-	'polkit'
-	'parallel'
-	'rxvt-unicode'
-	'sed'
-	'xorg-xwininfo'
-	'xorg-xrandr'
-	'xorg-xprop' # xprop
-	'wmctrl'     # wmctrl
-	'yay'
-	'yad'
-	'libnotify' # notify-send
-	'kdialog'
-	'lsof'
-	'libnewt'   # whiptail
-	'procps-ng' # pipof, pgrep
-	'pacman'
-	'pacman-mirrors'
-	'pigz'  # ter 18 jun 2024 16:37:50 -04
-	'rsync' # ter 18 jun 2024 16:37:50 -04
-	'mhwd'
-	'xsetprop'
-	'xtermset'
+  'coreutils'  # cat, cut, mkdir,rmdir, rm, sort, uniq, ... etc
+  'curl'
+  'gawk'
+  'grep'
+  'jq'
+  'kdialog'
+  'libnewt'   # whiptail
+  'libnotify' # notify-send
+  'lsof'
+  'mhwd'
+  'pamac-gtk'
+  'pacman'
+  'pacman-mirrors'
+  'parallel'
+  'paru'
+  'pigz'      # ter 18 jun 2024 16:37:50 -04
+  'polkit'
+  'procps-ng' # pipof, pgrep
+  'rsync'     # ter 18 jun 2024 16:37:50 -04
+  'rxvt-unicode'
+  'sed'
+  'util-linux' # rev
+  'wmctrl'     # wmctrl
+  'xorg-xprop' # xprop
+  'xorg-xrandr'
+  'xorg-xwininfo'
+  'xsetprop'
+  'xtermset'
+  'yay'
+  'yad'
 )
 
 # Automatically detect and use the correct install file
